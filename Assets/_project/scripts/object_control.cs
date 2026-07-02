@@ -23,7 +23,8 @@ public class object_control : MonoBehaviour
         {
             var enemy = Instantiate(enemyprefab);
             enemy.transform.position = new Vector3(Random.Range(0f,10f), 0f,Random.Range(0f,10f));
-            print("enemy created");
+            print(enemy.transform.position+" "+"was created");
+            return;
         }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
