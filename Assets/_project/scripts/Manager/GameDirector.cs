@@ -3,7 +3,7 @@ using UnityEngine;
 public class GameDirector : MonoBehaviour
 
 {
-    public EnemyDirection enemyDirection;
+    public EnemyManager enemyManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
@@ -13,6 +13,10 @@ public class GameDirector : MonoBehaviour
 
     void StartGame()
     {
-        enemyDirection.GeneratesEnemies();
+        enemyManager.GeneratesEnemies();
+    }
+    public void LevelCleared()
+    {
+        enemyManager.GeneratesEnemies();
     }
 }
